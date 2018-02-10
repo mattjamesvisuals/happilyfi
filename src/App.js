@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './img/wink.png';
 import './App.css';
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to HappilyFi!</h1>
         </header>
         <p className="App-intro">
-          Send them some happiness today. 
+          Send them some happiness today.
         </p>
       </div>
     );

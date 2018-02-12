@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './img/wink.png';
 import './App.css';
+import Form from './components/Form';
+
 
 class App extends Component {
   render() {
@@ -13,6 +15,7 @@ class App extends Component {
         <p className="App-intro">
           Send them some happiness today.
         </p>
+        <Form/>
       </div>
     );
   }

@@ -1,5 +1,10 @@
 .App {
+  background-color: #FFFF00;
   text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .App-logo {
@@ -16,6 +21,8 @@
 
 .App-title {
   font-size: 1.5em;
+  font-family: 'BioRhyme Expanded', serif;
+  border-color: black 1px;
 }
 
 .App-intro {

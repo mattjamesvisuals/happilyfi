@@ -7,7 +7,7 @@ class Form extends Component {
     return (
     <div className="background">
       <form>
-        <input className="inputField" size="50"/>
+        <input className="input" input type="text" placeholder="HappilyFi Anyone!"/>
         <Button/>
       </form>
 

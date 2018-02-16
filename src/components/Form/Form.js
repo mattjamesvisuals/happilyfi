@@ -9,15 +9,17 @@ class Form extends Component {
     this.state = { happinessReceiver: '' };
   }
 
-  clickHandler(e) {
+  clickHandler = (e) => {
+    e.preventDefault();
     const happyPerson = this.textInput.value;
+    this.textInput.value = "";
     this.setState({ happinessReceiver: happyPerson });
   };
 
   render() {
     return (
     <div className="background">
-      <form>
+      <form onSubmit={this.clickHandler}>
         <input
           className="input"
           type="text"
@@ -25,9 +27,14 @@ class Form extends Component {
           ref={(input) => { this.textInput = input; }}
         />
         <br />
-        <Button name="Send Happiness" onClick={this.clickHandler}/>
+        <Button name="Send Happiness" clickHandler={this.clickHandler}/>
       </form>
-      <div className= "receivedMessage">You sent {this.state.happinessReceiver} Happiness!</div>
+      {this.state.happinessReceiver && (
+  <div className= "receivedMessage">
+      You sent {this.state.happinessReceiver} Happiness!
+  </div>
+)
+}
 
     </div>
     );

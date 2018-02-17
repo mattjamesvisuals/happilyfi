@@ -35,6 +35,11 @@ height: 1000px;
   to { transform: rotate(360deg); }
 }
 
+.receivedMessage, .countdownTimer {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
 .input {
 
 	position:relative;

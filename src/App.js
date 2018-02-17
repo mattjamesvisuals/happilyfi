@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './img/wink.png';
 import './App.css';
 import Form from './components/Form';
-
+import Timer from './components/Timer';
 
 class App extends Component {
   render() {
@@ -16,6 +16,7 @@ class App extends Component {
           Send them some happiness today.
         </p>
         <Form/>
+        <Timer/>
       </div>
     );
   }

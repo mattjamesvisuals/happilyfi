@@ -60,7 +60,7 @@ class Form extends Component {
         )}
         {this.state.showTimer && (
           <div className="countdownTimer">
-            {this.state.countdownTimer}
+              {this.state.countdownTimer}
           </div>
         )}
       </div>

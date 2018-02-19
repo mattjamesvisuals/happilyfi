@@ -13,7 +13,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to HappilyFi!</h1>
         </header>
         <p className="App-intro">
-          Send them some happiness today.
+          HappilyFi Someone and <b>You</b> Today!
         </p>
         <Form/>
       </div>

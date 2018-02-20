@@ -9,6 +9,7 @@ class Form extends Component {
       happinessReceiver: '',
       countdownTimer: this.counterSeconds,
       showTimer: false,
+      showFinalMessage: false,
     };
   }
 
@@ -17,7 +18,11 @@ class Form extends Component {
     const happyPerson = this.textInput.value;
     this.textInput.value = "";
     this.initializeCountdown(happyPerson);
-  };
+    this.setState({
+    happinessReceiver: happyPerson,
+    });
+  }
+
 
   initializeCountdown = (happyPerson) => {
     this.setState({ showTimer: true });
@@ -30,18 +35,24 @@ class Form extends Component {
         clearInterval(timeinterval);
         this.setState({
           countdownTimer: this.counterSeconds,
-          happinessReceiver: happyPerson,
           showTimer: false,
+          showFinalMessage: true,
+
         });
       }
     }, 1000);
+  }
+  onChangeHandler = () => {
+    this.setState({
+    showFinalMessage: false,
+    });
   }
 
   render() {
     return (
       <div className="background">
         <form onSubmit={this.submitHandler}>
-          <input
+          <input onClick={this.onChangeHandler}
             className="input"
             type="text"
             placeholder="Name"
@@ -53,14 +64,14 @@ class Form extends Component {
             type="submit"
           />
         </form>
-        {this.state.happinessReceiver && (
+        {this.state.showFinalMessage && (
           <div className= "receivedMessage">
               You sent {this.state.happinessReceiver} Happiness!
           </div>
         )}
         {this.state.showTimer && (
           <div className="countdownTimer">
-              {this.state.countdownTimer}
+            Send happy thoughts to {this.state.happinessReceiver} for: {this.state.countdownTimer}
           </div>
         )}
       </div>

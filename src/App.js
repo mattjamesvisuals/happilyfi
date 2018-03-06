@@ -21,9 +21,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header/>
+        <Header triggerAbout={this.toggleModal} aboutText="About"/>
         <div className="jumbotron">
-          <img src={logo} className="App-logo" alt="logo" onMouseOver={this.toggleModal}/>
+          <img src={logo} className="App-logo" alt="logo"/>
           <h1 className="App-title">Welcome to HappilyFi!</h1>
         </div>
         <p className="App-intro">
@@ -31,6 +31,7 @@ class App extends Component {
         </p>
         <Form/>
         <Modal show={this.state.isOpen}
+          className='aboutModal'
           onClose={this.toggleModal}>
           To increase your happiness, all you have to do is randomly wish for somebody else to be happy.
         </Modal>

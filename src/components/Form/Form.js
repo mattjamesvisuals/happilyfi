@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from '../Button';
+import Modal from '../Modal';
 
 class Form extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class Form extends Component {
       countdownTimer: this.counterSeconds,
       showTimer: false,
       showFinalMessage: false,
+      showHappyModal: false,
     };
   }
 
@@ -20,6 +22,7 @@ class Form extends Component {
     this.initializeCountdown(happyPerson);
     this.setState({
     happinessReceiver: happyPerson,
+    showHappyModal: true,
     });
   }
 
@@ -37,6 +40,7 @@ class Form extends Component {
           countdownTimer: this.counterSeconds,
           showTimer: false,
           showFinalMessage: true,
+          showHappyModal: false,
 
         });
       }
@@ -51,6 +55,11 @@ class Form extends Component {
   render() {
     return (
       <div className="background">
+        {this.state.showFinalMessage && (
+          <div className= "receivedMessage">
+              You sent {this.state.happinessReceiver} Happiness!
+          </div>
+        )}
         <form onSubmit={this.submitHandler}>
           <input onClick={this.onChangeHandler}
             className="input"
@@ -64,16 +73,13 @@ class Form extends Component {
             type="submit"
           />
         </form>
-        {this.state.showFinalMessage && (
-          <div className= "receivedMessage">
-              You sent {this.state.happinessReceiver} Happiness!
-          </div>
-        )}
-        {this.state.showTimer && (
-          <div className="countdownTimer">
-            Send happy thoughts to {this.state.happinessReceiver} for: {this.state.countdownTimer}
-          </div>
-        )}
+
+
+        <Modal show={this.state.showHappyModal}
+          className='sendModal'
+          onClose={this.toggleModal}>
+          Send happy thoughts to {this.state.happinessReceiver} for: {this.state.countdownTimer}
+        </Modal>
       </div>
     );
   }

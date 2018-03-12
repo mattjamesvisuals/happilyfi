@@ -21,7 +21,7 @@ class Modal extends React.Component {
 
     // The modal "window"
     const modalStyle = {
-      backgroundColor: '#fff',
+      backgroundColor: '#FDE83D',
       borderRadius: 5,
       maxWidth: 500,
       minHeight: 300,
@@ -35,6 +35,7 @@ class Modal extends React.Component {
           {this.props.children}
 
           <div className="footer">
+
           </div>
         </div>
       </div>

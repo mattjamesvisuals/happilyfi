@@ -42,7 +42,7 @@ class App extends Component {
           This is the joy of loving-kindness. It turns out that being on the giving end of a kind thought is rewarding in and of itself
           . . . . All other things being equal, to increase your happiness, all you have to do is randomly wish for somebody else to be happy.
           That is all. It basically takes no time and no effort.
-          <div class='modalimage'><img src={logo} className="App-logo" alt="logo"/></div>
+          <div className='modalimage'><img src={logo} className="App-logo" alt="logo"/></div>
         </Modal>
       </div>
     );

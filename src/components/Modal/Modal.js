@@ -1,41 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../../App.css';
 
 class Modal extends React.Component {
   render() {
     // Render nothing if the "show" prop is false
-    if(!this.props.show) {
+    if (!this.props.show) {
       return null;
     }
 
-    // The gray background
-    const backdropStyle = {
-      position: 'fixed',
-      top: 0,
-      bottom: 0,
-      left: 0,
-      right: 0,
-      backgroundColor: 'rgba(0,0,0,0.3)',
-      padding: 50
-    };
-
-    // The modal "window"
-    const modalStyle = {
-      backgroundColor: '#FDE83D',
-      borderRadius: 5,
-      maxWidth: 500,
-      minHeight: 300,
-      margin: '0 auto',
-      padding: 30
-    };
-
     return (
-      <div className="backdrop" style={backdropStyle}>
-        <div className="modal" style={modalStyle} onMouseOut={this.props.onClose}>
-          {this.props.children}
+      <div className="backdrop" className='modalbackdrop'>
+        <div className='modalstyle' onMouseOut={this.props.onClose}>
+        <button type="button" className="closemodal" data-dismiss="modal">×</button>
+          <div className= 'modalcontent'>
 
+            {this.props.children}
+          </div>
           <div className="footer">
-
           </div>
         </div>
       </div>

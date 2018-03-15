@@ -30,19 +30,24 @@ class App extends Component {
           Send Happy...Get Happy!
         </p>
         <Form/>
-        <Modal show={this.state.isOpen}
+        <Modal
+          show={this.state.isOpen}
           className='aboutModal'
-          onClose={this.toggleModal}>
+          onClose={this.toggleModal}
+          closeOnMouseOut={false}
+          showCloseButton={true}
+        >
           To increase your happiness, all you have to do is randomly wish for somebody else to be happy.
           Just think, "I wish for this person, could be a friend, family member, celebrity, anyone at all, to be happy."
           That is it. Just think—this is an entirely thinking exercise.
           The entire exercise is just 10 seconds worth of thinking. You will emerge from this exercise smiling, happier than 10 seconds before!
-          <br/>
-          <br/>
+          <br/><br/>
           This is the joy of loving-kindness. It turns out that being on the giving end of a kind thought is rewarding in and of itself
           . . . . All other things being equal, to increase your happiness, all you have to do is randomly wish for somebody else to be happy.
           That is all. It basically takes no time and no effort.
-          <div className='modalimage'><img src={logo} className="App-logo" alt="logo"/></div>
+          <div className='modalimage'>
+            <img src={logo} className="App-logo" alt="logo"/>
+          </div>
         </Modal>
       </div>
     );

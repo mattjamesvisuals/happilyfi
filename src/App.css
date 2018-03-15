@@ -1,37 +1,35 @@
 html {
-background-image: url('./img/background.jpg');
-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
--webkit-background-size: cover;
-background-position: center;
-text-align: center;
+  background-image: url('./img/background.jpg');
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-position: center;
+  text-align: center;
 }
 
-.headerContainer{
+.headerContainer {
   background-color: white;
   text-align: right;
 }
-.navigation {
-    list-style: none;
-    margin-top: 0;
-    font-size: 1em;
-    font-family: 'BioRhyme Expanded', serif;
-    padding: 15px;
 
+.navigation {
+  list-style: none;
+  margin-top: 0;
+  font-size: 1em;
+  font-family: 'BioRhyme Expanded', serif;
+  padding: 15px;
 }
+
 .navigation li {
   display: inline;
   margin-right: 20px
-
 }
-
 
 .App-logo {
   /*animation: App-logo-spin infinite 10s linear;*/
   height: 80px;
 }
-
 
 .jumbotron {
   display:inline-block;
@@ -43,7 +41,6 @@ text-align: center;
 .App-title {
   font-size: 2em;
   font-family: 'BioRhyme Expanded', serif;
-
 }
 
 .App-intro {
@@ -62,22 +59,23 @@ text-align: center;
   margin-top: 25px;
 }
 
+/* form styles */
 .input {
-    border: #FFC107;
-    position: relative;
-    border-style: double;
-    height: 25px;
-    width: 250px;
-    margin-bottom: 15px;
-	  font-size: 1.5em;
-	  padding: 3px;
-    margin-top: 15px;
+  border: #FFC107;
+  position: relative;
+  border-style: double;
+  height: 25px;
+  width: 250px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  padding: 3px;
+  margin-top: 15px;
 
-  	// we want inline fields by default
-  	display: inline-block;
+	// we want inline fields by default
+	display: inline-block;
 
-  	// we want rounded corners no matter the size of the field
-  	border-radius: 9999em;
+	// we want rounded corners no matter the size of the field
+	border-radius: 9999em;
 }
 
 .button {
@@ -100,6 +98,7 @@ text-align: center;
 	text-shadow:0px 1px 0px #ffee66;
 }
 
+/* modal styles */
 .modalbackdrop {
   position: fixed;
   top: 0;
@@ -121,9 +120,9 @@ text-align: center;
 
 .modalcontent {
   width: 96%;
-    margin-top: 25px;
-
+  margin-top: 25px;
 }
+
 .modalimage {
   margin-top: 10px;
 }

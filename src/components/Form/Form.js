@@ -61,7 +61,8 @@ class Form extends Component {
           </div>
         )}
         <form onSubmit={this.submitHandler}>
-          <input onClick={this.onChangeHandler}
+          <input
+            onClick={this.onChangeHandler}
             className="input"
             type="text"
             placeholder="Name"
@@ -73,11 +74,12 @@ class Form extends Component {
             type="submit"
           />
         </form>
-
-
         <Modal show={this.state.showHappyModal}
           className='sendModal'
-          onClose={this.toggleModal}>
+          onClose={this.toggleModal}
+          closeOnMouseOut={false}
+          showCloseButton={false}
+        >
           Send happy thoughts to {this.state.happinessReceiver} for: {this.state.countdownTimer}
         </Modal>
       </div>

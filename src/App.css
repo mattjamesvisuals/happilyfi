@@ -121,6 +121,8 @@ html {
 .modalcontent {
   width: 96%;
   margin-top: 25px;
+  font-family:'BioRhyme Expanded', serif;
+  font-size: 12px;
 }
 
 .modalimage {

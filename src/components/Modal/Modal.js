@@ -18,7 +18,7 @@ class Modal extends React.Component {
     }
 
     return (
-      <div className="backdrop" className='modalbackdrop'>
+      <div className="backdrop" className='modalbackdrop' onClick={onClose}>
         <div className='modalstyle' onMouseOut={closeOnMouseOut ? onClose : ''}>
           {showCloseButton &&
             <button type="button" className="closemodal" onClick={onClose}>×</button>
@@ -37,7 +37,7 @@ class Modal extends React.Component {
 Modal.propTypes = {
   onClose: PropTypes.func.isRequired,
   show: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
   showCloseButton: PropTypes.bool.isRequired,
   closeOnMouseOut: PropTypes.bool.isRequired,
 };

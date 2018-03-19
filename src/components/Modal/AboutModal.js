@@ -18,7 +18,7 @@ const AboutModal = ({
   showCloseButton={true}
 >
   To increase your happiness, all you have to do is randomly wish for somebody else to be happy.
-  Just think, "I wish for this person, could be a friend, family member, celebrity, anyone at all, to be happy."
+  Just think, "I wish for this person to be happy." This person could be a friend, family member, celebrity, anyone at all.
   That is it. Just think—this is an entirely thinking exercise.
   The entire exercise is just 10 seconds worth of thinking. You will emerge from this exercise smiling, happier than 10 seconds before!
   <br/><br/>

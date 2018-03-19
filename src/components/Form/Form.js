@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from '../Button';
 import Modal from '../Modal';
+import logo from '../../img/wink.png';
 
 class Form extends Component {
   constructor(props) {
@@ -57,7 +58,7 @@ class Form extends Component {
       <div className="background">
         {this.state.showFinalMessage && (
           <div className= "receivedMessage">
-              You sent {this.state.happinessReceiver} Happiness!
+              You Sent {this.state.happinessReceiver} Happiness!
           </div>
         )}
         <form onSubmit={this.submitHandler}>
@@ -80,7 +81,8 @@ class Form extends Component {
           closeOnMouseOut={false}
           showCloseButton={false}
         >
-          Send happy thoughts to {this.state.happinessReceiver} for: {this.state.countdownTimer}
+          Send Happy Thoughts To {this.state.happinessReceiver} for: {this.state.countdownTimer}
+          <div><img src={logo} className="sent-logo" alt="logo"/></div>
         </Modal>
       </div>
     );

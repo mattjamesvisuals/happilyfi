@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../../App.css';
+import classNames from 'classnames';
 
 class Modal extends React.Component {
   render() {
@@ -23,7 +24,7 @@ class Modal extends React.Component {
           {showCloseButton &&
             <button type="button" className="closemodal" onClick={onClose}>×</button>
           }
-          <div className= 'modalcontent'>
+          <div className= {classNames('modalcontent',this.props.className)}>
             {children}
           </div>
           <div className="footer">

@@ -11,7 +11,7 @@ class Header extends Component {
       <div className= "headerContainer">
         <ul className= "navigation">
           <li onClick={triggerAbout}>About</li>
-          <li><a href= '/blog'></a>Blog</li>
+          <li><a href= '/blog'>Blog</a></li>
         </ul>
       </div>
     );

@@ -25,6 +25,7 @@ html {
   display: inline;
   margin-right: 20px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .App-logo {
@@ -151,6 +152,3 @@ html {
   margin-top: 25px;
   text-align: center;
 }
-
-
-  

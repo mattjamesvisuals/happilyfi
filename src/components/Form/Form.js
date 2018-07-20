@@ -66,7 +66,7 @@ class Form extends Component {
             onClick={this.onChangeHandler}
             className="input"
             type="text"
-            placeholder="Name"
+            placeholder="Send Happiness To..."
             ref={(input) => { this.textInput = input; }}
           />
           <br />

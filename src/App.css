@@ -23,7 +23,8 @@ html {
 
 .navigation li {
   display: inline;
-  margin-right: 20px
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 .App-logo {
@@ -150,3 +151,6 @@ html {
   margin-top: 25px;
   text-align: center;
 }
+
+
+  

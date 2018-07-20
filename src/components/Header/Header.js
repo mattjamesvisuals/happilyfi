@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
+import '../../App.css';
 
 class Header extends Component {
   render() {
     const {
-      aboutText,
       triggerAbout
     } = this.props;
 
     return (
       <div className= "headerContainer">
         <ul className= "navigation">
-          <li onMouseOver={triggerAbout}>{aboutText}</li>
-          <li>Blog</li>
+          <li onClick={triggerAbout}>About</li>
+          <li><a href=“/blog”>Blog</a></li>Blog</li>
         </ul>
       </div>
     );

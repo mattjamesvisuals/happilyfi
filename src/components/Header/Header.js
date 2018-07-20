@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import '../../App.css';
 
 class Header extends Component {
@@ -7,13 +9,17 @@ class Header extends Component {
       triggerAbout
     } = this.props;
 
-    return (
-      <div className= "headerContainer">
-        <ul className= "navigation">
-          <li onClick={triggerAbout}>About</li>
-          <li><a href= '/blog'>Blog</a></li>
-        </ul>
-      </div>
+    return ( <
+      div className = "headerContainer" >
+      <
+      ul className = "navigation" >
+      <
+      li onClick = {
+        triggerAbout
+      } > About < /li> <
+      li > < a href = "/blog" target="_blank" > Blog < /a></li >
+      <
+      /ul></div >
     );
   }
 }

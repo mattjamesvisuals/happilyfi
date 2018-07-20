@@ -19,13 +19,13 @@ html {
   font-size: 1em;
   font-family: 'BioRhyme Expanded', serif;
   padding: 15px;
+  text-decoration: none;
 }
 
 .navigation li {
   display: inline;
   margin-right: 20px;
   cursor: pointer;
-  text-decoration: none;
 }
 
 .App-logo {

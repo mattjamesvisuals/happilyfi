@@ -17,7 +17,7 @@ class Header extends Component {
       li onClick = {
         triggerAbout
       } > About < /li> <
-      li > < a href = "/blog" target="_blank" > Blog < /a></li >
+      li > < a href ="/blog" style={{ textDecoration: 'none' }} target="_blank" > Blog < /a></li >
       <
       /ul></div >
     );

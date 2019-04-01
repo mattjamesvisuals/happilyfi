@@ -6,19 +6,21 @@ import logo from '../../img/wink.png';
 class Form extends Component {
   constructor(props) {
     super(props);
-    this.counterSeconds = 10;
     this.state = {
       happinessReceiver: '',
-      countdownTimer: this.counterSeconds,
+      countdownTimer: 10,
       showTimer: false,
       showFinalMessage: false,
       showHappyModal: false,
+      selectedOption: 10,
     };
   }
 
   submitHandler = (e) => {
     e.preventDefault();
     const happyPerson = this.textInput.value;
+    const happyEmail = this.emailInput.value;
+    console.log(happyEmail);
     this.textInput.value = "";
     this.initializeCountdown(happyPerson);
     this.setState({
@@ -27,9 +29,21 @@ class Form extends Component {
     });
   }
 
+  handleOptionChange = (e) => {
+    console.log(e);
+    const time = e.target.value;
+    this.setState({
+    selectedOption: time,
+    });
+    console.log(time);
+  }
+
 
   initializeCountdown = (happyPerson) => {
-    this.setState({ showTimer: true });
+    this.setState({
+      showTimer: true,
+      countdownTimer: this.state.selectedOption
+    });
     const timeinterval = setInterval(() => {
       const numSecondsRemaining = this.state.countdownTimer - 1;
       this.setState({
@@ -38,7 +52,7 @@ class Form extends Component {
       if (this.state.countdownTimer <= 0) {
         clearInterval(timeinterval);
         this.setState({
-          countdownTimer: this.counterSeconds,
+          countdownTimer: this.state.selectedOption,
           showTimer: false,
           showFinalMessage: true,
           showHappyModal: false,
@@ -62,7 +76,35 @@ class Form extends Component {
           </div>
         )}
         <form onSubmit={this.submitHandler}>
-          <input
+        <input
+          type="radio"
+          checked={this.state.selectedOption === '10'}
+          onChange={this.handleOptionChange}
+          name="timeValue"
+          value="10"
+          id="ten"
+          />
+        <label>10 seconds</label>
+        <input
+          type="radio"
+          checked={this.state.selectedOption === '30'}
+          onChange={this.handleOptionChange}
+          name="timeValue"
+          value="30"
+          id="thirty"
+          />
+        <label>30 seconds</label>
+        <input
+          type="radio"
+          checked={this.state.selectedOption === '60'}
+          onChange={this.handleOptionChange}
+          name="timeValue"
+          value="60"
+          id="sixty"
+        />
+        <label>60 seconds</label>
+        <br/>
+        <input
             onClick={this.onChangeHandler}
             className="input"
             type="text"
@@ -70,6 +112,13 @@ class Form extends Component {
             ref={(input) => { this.textInput = input; }}
           />
           <br />
+          <input
+              className="input"
+              type="text"
+              placeholder="Add Email Address"
+              ref={(input) => { this.emailInput = input; }}
+            />
+            <br/>
           <Button
             buttonName="Send Happiness"
             type="submit"
